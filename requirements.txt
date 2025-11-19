@@ -1,0 +1,8 @@
+streamlit
+fastai==2.7.12
+fastcore==1.5.29
+numpy==1.26.4
+pillow
+torch==2.0.1
+torchvision==0.15.2
+fastdownload
