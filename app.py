@@ -148,7 +148,7 @@ if os.path.exists(sample_dir):
 # ----------------------------------------------------
 # UPLOADER
 # ----------------------------------------------------
-uploaded = st.file_uploader("", type=["jpg","jpeg","png"], label_visibility="collapsed")
+uploaded = st.file_uploader("upload image", type=["jpg","jpeg","png"], label_visibility="collapsed")
 
 # auto-load sample selection
 if st.session_state.selected_image and uploaded is None:
@@ -179,7 +179,8 @@ if sample_imgs:
 # ----------------------------------------------------
 if uploaded:
     img = PILImage.create(uploaded)
-    st.image(img, caption="preview", use_container_width=True)
+    # st.image(img, caption="preview", use_container_width=True)
+    st.image(img, caption="preview", width="stretch")
 
     if st.button("classify image 🔍"):
         with st.spinner("analyzing…"):
